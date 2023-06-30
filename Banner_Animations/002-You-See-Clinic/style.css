@@ -1,0 +1,323 @@
+* {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  box-sizing: border-box;
+  animation-iteration-count: infinite;
+  /* background-color: #999; */
+}
+
+.container {
+  width: min(994px, 100vw);
+  height: calc(250 / 994 * min(994px, 100vw));
+  font-size: min(9.94px, 1vw);
+  position: relative;
+  display: flex;
+  /* justify-content: center;
+    align-items: center; */
+  /* overflow: hidden; */
+  background-color: #798b9d;
+  z-index: 5;
+}
+
+/* 
+.background {
+    width: 100%;
+    height: auto;
+} */
+/* 
+.animation {
+    width: 55em;
+    height: 100%;
+    background-color: #798b9d;
+} */
+
+.zuLogo {
+  width: 20em;
+  height: auto;
+}
+
+.zuLogoFull {
+  width: 50em;
+  height: auto;
+}
+
+.eye {
+  width: 60em;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 12.5em;
+  left: 0;
+  animation-name: eye;
+}
+
+.eye-area {
+  width: 35em;
+  height: auto;
+}
+
+.eyeBall {
+  width: 12em;
+  height: auto;
+  animation-name: eyeBall;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes eye {
+  0% {
+    transform: translate(-24em, -7.9em) scale(0.08);
+    opacity: 0.8;
+  }
+
+  5% {
+    transform: translate(0) scale(1);
+    opacity: 1;
+  }
+
+  5% {
+    transform: translate(0) scale(1);
+    opacity: 1;
+  }
+
+  5% {
+    transform: translate(0) scale(1);
+    opacity: 1;
+  }
+
+  30% {
+    transform: translate(0) scale(1);
+    opacity: 1;
+  }
+
+  31% {
+    transform: translate(0) scale(1) rotate(0);
+    opacity: 1;
+  }
+
+  31% {
+    transform: translate(0) scale(1) rotate(-20deg);
+    opacity: 1;
+  }
+
+  33% {
+    transform: translate(0) scale(1) rotate(20deg);
+    opacity: 1;
+  }
+
+  35% {
+    transform: translate(0) scale(1) rotate(-20deg);
+    opacity: 1;
+  }
+
+  37% {
+    transform: translate(0) scale(1) rotate(20deg);
+    opacity: 1;
+  }
+
+  39% {
+    transform: translate(0) scale(1) rotate(0);
+    opacity: 1;
+  }
+
+  45% {
+    transform: translate(-24em, -7.9em) scale(0.08);
+    opacity: 1;
+  }
+
+  46% {
+    transform: translate(-24em, -7.9em) scale(0.08);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes eyeBall {
+  5% {
+    transform: translateX(0);
+  }
+
+  12% {
+    transform: translateX(7.9em);
+  }
+
+  13% {
+    transform: translateX(8em);
+  }
+
+  14% {
+    transform: translateX(8em);
+  }
+
+  22% {
+    transform: translate(-5.3em, 2.5em);
+  }
+
+  23% {
+    transform: translate(-5.4em, 2.6em);
+  }
+
+  24% {
+    transform: translate(-5.4em, 2.6em);
+  }
+
+  30% {
+    transform: translate(0);
+  }
+}
+
+.logo {
+  width: 100em;
+  height: auto;
+  animation-name: logo;
+}
+
+@keyframes logo {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  46% {
+    opacity: 1;
+  }
+}
+
+.CTA {
+  width: 120em;
+  height: 0;
+  bottom: 1em;
+  left: 1em;
+  animation-name: CTA;
+  object-fit: cover;
+  object-position: bottom;
+  animation-fill-mode: forwards;
+}
+
+@keyframes CTA {
+
+  35% {
+    height: 0;
+  }
+
+  70% {
+    height: calc(199 / 292 * 15em);
+  }
+
+  100% {
+    height: calc(199 / 292 * 15em);
+  }
+
+}
+
+.mainTXT {
+    width: 110em;
+    height: auto;
+    top: -3em;
+    left: 0;
+    transform: translateX(-100em);
+    animation-name: txt;
+}
+
+@keyframes txt {
+
+    0% {transform: translateX(-100em);}
+
+    50% {transform: translateX(-100em);}
+
+    69% {transform: translateX(0);}
+
+    70% {transform: translateX(1em);}
+
+    98% {transform: translateX(1em); opacity: 1;}
+
+    100% {transform: translateX(1em); opacity: 0;}
+
+}
+
+.redShape {
+    width: 100em;
+    height: 0;
+    object-fit: cover;
+    object-position: bottom;
+    animation-name: redShape;
+    bottom: 0;
+    left: 5em;
+}
+
+@keyframes redShape {  
+
+    40% {
+        height: 0;
+      }
+    
+      44% {
+        height: calc(125 / 497 * 100em);
+      }
+    
+      98% {
+        height: calc(125 / 497 * 100em);
+        opacity: 1;
+      }
+    
+      100% {
+        height: calc(125 / 497 * 100em);
+        opacity: 0;
+      }
+
+}
+
+.woman {
+
+    width: 100em;
+    height: auto;
+    animation-name: woman;
+    left: 10em;
+}
+
+
+@keyframes woman {
+
+    0% {
+        opacity: 0;
+    }
+
+    45% {
+        opacity: 0;
+    }
+
+    55% {
+        opacity: 1;
+        transform: translateX(2em);
+    }
+
+    75% {
+        opacity: 1;
+        transform: translateX(1em);
+    }
+
+    95% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    98% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+

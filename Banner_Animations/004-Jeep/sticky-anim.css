@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#CD_DHM_JEEP_CAMPAIGN {
+  width: 100vw;
+  height: calc(100vw * 170 / 300); /* 300 x 170 */
+  background-image: url("./assets/static-bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes headlights-anim {
+  0%,
+  64%,
+  74%,
+  100% {
+    opacity: 0;
+  }
+  70%,
+  80% {
+    opacity: 1;
+  }
+}
+
+#headlights {
+  animation-name: headlights-anim;
+}
+
+@keyframes cta-anim {
+  0%,
+  50% {
+    opacity: 0;
+    transform: translate(0);
+  }
+  65%,
+  80% {
+    opacity: 1;
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(50%, 0);
+  }
+}
+
+#cta {
+  animation-name: cta-anim;
+}
+
+@keyframes heading-1-anim {
+  0%,
+  98%,
+  100% {
+    transform: translate(50%, 0);
+  }
+  25%,
+  80% {
+    transform: translate(0);
+  }
+}
+
+#heading-1 {
+  animation-name: heading-1-anim;
+}
+
+@keyframes heading-2-anim {
+  0%,
+  25%,
+  100% {
+    transform: translate(50%, 0);
+  }
+  50%,
+  80% {
+    transform: translate(0);
+  }
+}
+
+#heading-2 {
+  animation-name: heading-2-anim;
+}

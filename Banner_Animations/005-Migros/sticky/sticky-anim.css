@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  animation-duration: 15s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#CD_DHM_MIGROS_CAMPAIGN {
+  width: 100vw;
+  height: calc(100vw * 170 / 300); /* 300 x 170 */
+  background-image: url("./assets/DH-Migros-sticky-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes productAnimation {
+  0%,
+  100% {
+    transform: translateX(50%);
+  }
+  5% {
+    transform: translateX(50%);
+    opacity: 1;
+  }
+  10% {
+    transform: translateX(0);
+  }
+  17% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  19% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes priceAnimation {
+  0%,
+  19%,
+  100% {
+    opacity: 0;
+  }
+  14%,
+  17% {
+    opacity: 1;
+  }
+}
+
+#product_1,
+#product_2,
+#product_3,
+#product_4,
+#product_5 {
+  animation-name: productAnimation;
+  opacity: 0;
+}
+
+#price_1,
+#price_2,
+#price_3,
+#price_4,
+#price_5 {
+  animation-name: priceAnimation;
+  opacity: 0;
+}
+
+#product_2,
+#price_2 {
+  animation-delay: 3s;
+}
+
+#product_3,
+#price_3 {
+  animation-delay: 6s;
+}
+
+#product_4,
+#price_4 {
+  animation-delay: 9s;
+}
+
+#product_5,
+#price_5 {
+  animation-delay: 12s;
+}

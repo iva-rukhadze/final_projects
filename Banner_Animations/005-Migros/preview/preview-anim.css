@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  animation-duration: 7.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#CD_DHM_MIGROS_PREVIEW_CAMPAIGN {
+  width: 100vw;
+  height: calc(100vw * 250 / 300);
+  font-size: 1vw;
+  background-image: url("./assets/DH-Migros-Preview-element.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+#rectangle_shape {
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f60;
+  position: absolute;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  animation-name: rectangle;
+  animation-timing-function: ease-out;
+  transform-origin: top;
+}
+
+@keyframes rectangle {
+  40% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  62%,
+  100% {
+    clip-path: polygon(calc(100% / 9 * 4) 0, calc(100% / 9 * 5) 0, 50% 23%, calc(100% / 9 * 4) 0);
+  }
+}
+
+#m {
+  width: 16em;
+  height: 14em;
+  position: absolute;
+  opacity: 1;
+  left: calc(50% - 8em);
+  animation-name: m;
+  background-image: url("./assets/M.svg");
+}
+
+@keyframes m {
+  0% {
+    opacity: 0;
+    left: calc(50% - 8em);
+  }
+  8% {
+    transform: scale(1.1);
+  }
+  12% {
+    transform: scale(1);
+    left: calc(50% - 8em);
+  }
+  4%, 30% {
+    opacity: 1;
+  }
+  20% {
+    left: calc(50% - 35em);
+  }
+  36% {
+    opacity: 0;
+  }
+  100% {
+    left: calc(50% - 35em);
+    opacity: 0;
+  }
+}
+
+#igros {
+  position: absolute;
+  width: 0;
+  height: 14em;
+  left: calc(50% - 16em);
+  opacity: 1;
+  animation-name: igros;
+  overflow: hidden;
+  background-image: url("./assets/IGROS.svg");
+  background-position: left;
+  background-size: 56em 14em;
+}
+
+@keyframes igros {
+  0%, 24% {
+    width: 0;
+  }
+  30%{
+    opacity: 1;
+    width: 58em;
+  }
+  36%, 100%{
+    opacity: 0;
+  }
+  
+}
+
+#MIGROS {
+  width: 50%;
+  height: auto;
+  display: flex;
+  position: absolute;
+  left: -100%;
+  animation-name: MIGROS;
+  animation-timing-function: ease-out;
+}
+
+@keyframes MIGROS {
+  44% {
+    left: -100%;
+  }
+  64%, 100% {
+    left: 6%;
+  }
+}
+
+#week {
+  --w: 36em;
+  width: var(--w);
+  position: absolute;
+  height: 0;
+  left: 8%;
+  top: calc(50% + 9em);
+  animation-name: week;
+  animation-timing-function: linear;
+  background-image: url("./assets/Week.png");
+  background-size: 100% auto;
+  background-position: top;
+}
+
+@keyframes week {
+  64%, 0% {
+    height: 0;
+  }
+  72%,
+  100% {
+    height: calc(var(--w) / 97 * 50);
+  }
+}
+
+#date {
+  --w: 46em;
+  width: var(--w);
+  position: absolute;
+  height: 0;
+  left: 8%;
+  top: calc(50% + 23em);
+  animation-name: date;
+  animation-timing-function: linear;
+  background-image: url("./assets/Date.png");
+  background-size: 100% auto;
+  background-position: top;
+}
+
+@keyframes date {
+  68%, 0% {
+    height: 0;
+  }
+  72%,
+  100% {
+    height: calc(var(--w) / 1269 * 154);
+  }
+}
+
+#meat {
+  position: absolute;
+  width: 38em;
+  height: auto;
+  left: 57em;
+  animation-name: meat;
+}
+
+@keyframes meat {
+  72%, 0% {
+    top: 100%;
+  }
+  96%,
+  100% {
+    top: 44em;
+  }
+}

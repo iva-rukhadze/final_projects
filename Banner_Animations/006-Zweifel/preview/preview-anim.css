@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#CD_DHM_ZWEIFEL_PREVIEW_CAMPAIGN {
+  width: 100vw;
+  height: calc(100vw * 250 / 300);
+  font-size: 1vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#CD_DHM_ZWEIFEL_PREVIEW_CAMPAIGN .bg-image {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation-duration: 10s;
+  animation-name: fade;
+}
+
+.packs {
+  width: 100vw;
+  animation-name: fade, rotate;
+}
+
+.new {
+  animation-delay: 8.67s;
+  width: 20vw;
+  position: absolute;
+  top: 60%;
+  left: 30%;
+}
+
+.logo {
+  top: 30%;
+  left: 35%;
+  position: absolute;
+  animation-name: logo;
+  transform-origin: center center;
+}
+
+.pack1 {
+  animation-delay: 2s;
+}
+
+.pack2 {
+  animation-delay: 3.15s;
+}
+
+.pack3 {
+  animation-delay: 4.3s;
+}
+
+.pack4 {
+  animation-delay: 5.45s;
+}
+
+.pack5 {
+  animation-delay: 6.6s;
+}
+
+.pack6 {
+  animation-delay: 7.75s;
+}
+
+#CD_DHM_ZWEIFEL_PREVIEW_CAMPAIGN .bg-image:nth-child(1) {
+  background-image: url("./assets/Bg-image-01.jpg");
+  animation-delay: 2s;
+}
+
+#CD_DHM_ZWEIFEL_PREVIEW_CAMPAIGN .bg-image:nth-child(2) {
+  background-image: url("./assets/Bg-image-02.jpg");
+  animation-delay: 3.15s;
+}
+
+#CD_DHM_ZWEIFEL_PREVIEW_CAMPAIGN .bg-image:nth-child(3) {
+  background-image: url("./assets/Bg-image-03.jpg");
+  animation-delay: 4.3s;
+}
+
+#CD_DHM_ZWEIFEL_PREVIEW_CAMPAIGN .bg-image:nth-child(4) {
+  background-image: url("./assets/Bg-image-04.jpg");
+  animation-delay: 5.45s;
+}
+
+#CD_DHM_ZWEIFEL_PREVIEW_CAMPAIGN .bg-image:nth-child(5) {
+  background-image: url("./assets/Bg-image-05.jpg");
+  animation-delay: 6.6s;
+}
+
+#CD_DHM_ZWEIFEL_PREVIEW_CAMPAIGN .bg-image:nth-child(6) {
+  background-image: url("./assets/Bg-image-06.jpg");
+  animation-delay: 7.75s;
+}
+
+@keyframes fade {
+  0%,
+  25% {
+    opacity: 0;
+  }
+  1%,
+  18% {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  0%,
+  2%,
+  13% {
+    transform: rotate(0deg);
+  }
+  5%,
+  11% {
+    transform: rotate(-10deg);
+  }
+  8% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes logo {
+  0% {
+    transform: scale(0) rotateY(0deg);
+  }
+  10%,
+  15% {
+    transform: scale(1) rotateY(720deg);
+  }
+  20% {
+    transform: scale(1) rotateY(720deg) translate(-100%, -80%) scale(0.7);
+  }
+  95% {
+    transform: scale(1) rotateY(720deg) translate(-100%, -80%) scale(0.7);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotateY(720deg) translate(-100%, -80%) scale(0.7);
+    opacity: 0;
+  }
+}
